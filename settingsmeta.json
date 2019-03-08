@@ -1,0 +1,28 @@
+{
+    "name": "Mozilla IoT Gateway",
+    "skillMetadata": {
+        "sections": [
+            {
+                "name": "Gateway Details",
+                "fields": [
+                    {
+                        "name": "host",
+                        "type": "text",
+                        "label": "Gateway URL",
+                        "value": "https://gateway.local"
+                    },
+                    {
+                        "name": "token",
+                        "type": "password",
+                        "label": "Local Token",
+                        "value": ""
+                    },
+                    {
+                        "type": "label",
+                        "label": "To get a local token, go to your gateway's Settings > Developer > Create local token page"
+                    }
+                ]
+            }
+        ]
+    }
+}
