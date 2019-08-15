@@ -22,6 +22,11 @@
                         "label": "To get a local token, go to your gateway's Settings > Developer > Create local token page"
                     }
                 ]
+            },
+            {
+              "type": "oauth",
+              "name": "Mozilla",
+              "value": 7
             }
         ]
     }

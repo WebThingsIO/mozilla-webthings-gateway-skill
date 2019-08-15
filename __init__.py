@@ -1,5 +1,7 @@
 from mycroft import MycroftSkill, intent_handler
 from adapt.intent import IntentBuilder
+from mycroft.api import DeviceApi
+
 import requests
 
 
@@ -17,6 +19,13 @@ class MozillaIotGateway(MycroftSkill):
             'Content-Type': 'application/json',
         }
 
+    def get_oauth_token(self):
+        try:
+            token = DeviceApi().get_oauth_token(1172752248686736379)
+        except requests.HTTPError:
+            return None
+        return token['access_token']
+
     @intent_handler(IntentBuilder('CommandIntent').require('Action')
                     .require('Type'))
     # .require('Thing'))
@@ -25,6 +34,8 @@ class MozillaIotGateway(MycroftSkill):
         if host:
             self.host = host
         token = self.settings.get('token')
+        if not token:
+            token = self.get_oauth_token()
         if token:
             self.token = token
 
