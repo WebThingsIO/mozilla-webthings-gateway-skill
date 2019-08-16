@@ -3,6 +3,8 @@ from adapt.intent import IntentBuilder
 from mycroft.api import DeviceApi
 
 import requests
+import base64
+import json
 
 
 class MozillaIotGateway(MycroftSkill):
@@ -26,11 +28,32 @@ class MozillaIotGateway(MycroftSkill):
             return None
         return token['access_token']
 
+    def get_oauth_host(self):
+        try:
+            token = DeviceApi().get_oauth_token(1172752248686736379)
+        except requests.HTTPError:
+            return None
+        jwt = token['access_token']
+        parts = jwt.split(".")
+        if len(parts) < 2:
+            return None
+        payload_raw = parts[1]
+        if len(payload_raw) % 3 > 0:
+            payload_raw += "=" * (3 - (len(payload_raw) % 3))
+        try:
+            payload_medium_rare = base64.b64decode(payload_raw)
+            payload = json.loads(payload_medium_rare)
+            return payload['iss']
+        except ValueError:
+            return None
+
     @intent_handler(IntentBuilder('CommandIntent').require('Action')
                     .require('Type'))
     # .require('Thing'))
     def handle_command_intent(self, message):
         host = self.settings.get('host')
+        if not host:
+            host = self.get_oauth_host()
         if host:
             self.host = host
         token = self.settings.get('token')
