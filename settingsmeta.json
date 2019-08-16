@@ -3,8 +3,26 @@
     "skillMetadata": {
         "sections": [
             {
-                "name": "Gateway Details",
+                "name": "Gateway Configuration",
                 "fields": [
+                    {
+                        "type": "label",
+                        "label": "Click to authorize:"
+                    },
+                    {
+                      "type": "oauth",
+                      "name": "Mozilla",
+                      "value": 7
+                    }
+                ]
+            },
+            {
+                "name": "Manual Configuration",
+                "fields": [
+                    {
+                        "type": "label",
+                        "label": "Not recommended, use only if your gateway is local-only"
+                    },
                     {
                         "name": "host",
                         "type": "text",
@@ -14,17 +32,8 @@
                     {
                         "name": "token",
                         "type": "password",
-                        "label": "Local Token",
+                        "label": "Local Token from Settings > Developer > Create Local Token",
                         "value": ""
-                    },
-                    {
-                        "type": "label",
-                        "label": "To get a local token, go to your gateway's Settings > Developer > Create local token page"
-                    },
-                    {
-                      "type": "oauth",
-                      "name": "Mozilla",
-                      "value": 7
                     }
                 ]
             }
