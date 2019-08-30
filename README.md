@@ -3,6 +3,9 @@ Controls the Mozilla WebThings Gateway
 
 ## About
 
+Enables voice control of the Mozilla WebThings Gateway. To use, configure with
+your local gateway's information either through the one-click "Configure"
+button or manually through the gateway's developer local token service.
 
 ## Examples
 * "Turn on the kitchen light"
