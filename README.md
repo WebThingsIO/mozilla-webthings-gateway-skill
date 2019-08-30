@@ -1,16 +1,22 @@
-## Mozilla Iot Gateway
-Controls the mozilla iot gateway
+# <img src='https://mozilla-iot.github.io/mozilla-webthings-gateway-skill/icon.png' card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/> Mozilla WebThings Gateway
+Controls the Mozilla WebThings Gateway
 
-## Description
+## About
 
 
 ## Examples
- - "Turn on the kitchen"
- - "Turn off the salt lamp"
- - "Dim the hallway"
-
+* "Turn on the kitchen light"
+* "Dim the hallway light"
+* "Turn the table light red"
 
 ## Credits
-Mozilla IoT
+Mozilla IoT Team (@mozilla-iot)
 
+## Category
+**IoT**
+
+## Tags
+#mozilla
+#webthings
+#iot
 
