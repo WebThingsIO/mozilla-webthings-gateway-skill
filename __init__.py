@@ -38,8 +38,7 @@ class MozillaIotGateway(MycroftSkill):
         if len(parts) < 2:
             return None
         payload_raw = parts[1]
-        if len(payload_raw) % 3 > 0:
-            payload_raw += "=" * (3 - (len(payload_raw) % 3))
+        payload_raw += "=" * (3 - (len(payload_raw) % 3))
         try:
             payload_medium_rare = base64.b64decode(payload_raw)
             payload = json.loads(payload_medium_rare)
