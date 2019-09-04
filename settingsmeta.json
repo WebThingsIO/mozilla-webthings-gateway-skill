@@ -3,7 +3,7 @@
     "skillMetadata": {
         "sections": [
             {
-                "name": "Gateway Configuration",
+                "name": "Gateway Configuration (Automatic)",
                 "fields": [
                     {
                         "type": "label",
@@ -27,7 +27,8 @@
                         "name": "host",
                         "type": "text",
                         "label": "Gateway URL",
-                        "value": "https://gateway.local"
+                        "placeholder": "https://gateway.local",
+                        "value": ""
                     },
                     {
                         "name": "token",
