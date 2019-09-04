@@ -23,14 +23,14 @@ class MozillaIotGateway(MycroftSkill):
 
     def get_oauth_token(self):
         try:
-            token = DeviceApi().get_oauth_token(1172752248686736379)
+            token = DeviceApi().get_oauth_token(1172752248686736380)
         except requests.HTTPError:
             return None
         return token['access_token']
 
     def get_oauth_host(self):
         try:
-            token = DeviceApi().get_oauth_token(1172752248686736379)
+            token = DeviceApi().get_oauth_token(1172752248686736380)
         except requests.HTTPError:
             return None
         jwt = token['access_token']
