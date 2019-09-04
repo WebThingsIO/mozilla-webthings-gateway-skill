@@ -40,7 +40,7 @@ class MozillaIotGateway(MycroftSkill):
         payload_raw = parts[1]
         payload_raw += "=" * (3 - (len(payload_raw) % 3))
         try:
-            payload_medium_rare = base64.b64decode(payload_raw)
+            payload_medium_rare = str(base64.b64decode(payload_raw), "utf-8")
             payload = json.loads(payload_medium_rare)
             return payload['iss']
         except ValueError:
