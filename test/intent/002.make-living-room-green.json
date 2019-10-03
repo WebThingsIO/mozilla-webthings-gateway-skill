@@ -1,0 +1,9 @@
+{
+  "utterance": "make the living room light green",
+  "intent_type": "CommandIntent",
+  "expected_data": {
+    "Action": "make",
+    "Type": "green"
+  }
+}
+

@@ -1,0 +1,8 @@
+{
+  "utterance": "dim the front door light by five percent",
+  "intent_type": "CommandIntent",
+  "expected_data": {
+    "Action": "dim",
+    "Type": "percent"
+  }
+}

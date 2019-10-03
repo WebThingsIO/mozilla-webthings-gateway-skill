@@ -1,0 +1,8 @@
+{
+  "utterance": "turn kitchen on",
+  "intent_type": "CommandIntent",
+  "expected_data": {
+    "Action": "turn",
+    "Type": "on"
+  }
+}
