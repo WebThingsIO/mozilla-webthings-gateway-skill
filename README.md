@@ -9,7 +9,7 @@ button or manually through the gateway's developer local token service.
 
 ## Examples
 * "Turn on the kitchen light"
-* "Dim the hallway light"
+* "Dim the hallway light by five percent"
 * "Turn the table light red"
 
 ## Credits
